@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.9"
+            >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_action_bar"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/save_note_iv"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_done_black_24dp"
+            style="@style/add_note_action_iv"
+            android:contentDescription="Save Note"
+            />
+
+        <ImageView
+            android:id="@+id/delete_note_iv"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_delete_forever_black_24dp"
+            style="@style/add_note_action_iv"
+            android:contentDescription="Cancel or Delete note"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/top_action_bar"
+        android:id="@+id/view_separator"
+        style="@style/grey_view_separator"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_contact_details"
+        android:text="@string/add_contact_details"
+        android:drawableLeft="@mipmap/contact_dummy"
+        android:contentDescription="Add contact details"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:layout_below="@+id/view_separator"
+        />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/note_et"
+        android:background="@drawable/edt_background"
+        android:layout_below="@+id/select_contact_details"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:inputType="textMultiLine"
+        android:gravity="top|left"
+        android:padding="@dimen/size_10dp"
+        />
+        </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        ads:adSize="BANNER"
+        android:layout_gravity="center"
+        android:layout_weight="0.1"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/base_card_view"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_marginRight="@dimen/size_5dp"
+        android:layout_marginEnd="@dimen/size_5dp"
+        android:layout_marginStart="@dimen/size_5dp"
+        android:elevation="@dimen/size_5dp"
+        android:background="@android:color/white"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/size_10dp"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size_10dp"
+            android:paddingRight="@dimen/size_10dp"
+            android:paddingStart="@dimen/size_10dp"
+            android:paddingEnd="@dimen/size_10dp"
+            android:id="@+id/user_details_actions_rl"
+            >
+            
+            <ImageView
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_50dp"
+                android:id="@+id/user_image_iv"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+
+                android:src="@mipmap/ic_face_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_name_tv"
+                android:text="Dummy Name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_toRightOf="@+id/user_image_iv"
+
+                android:fontFamily="sans-serif-bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_below="@+id/user_name_tv"
+                android:id="@+id/date_tv"
+                android:fontFamily="sans-serif"
+                android:textSize="10sp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                >
+
+            <ImageView
+                style="@style/user_action_style_iv"
+                android:src="@mipmap/ic_share_black_24dp"
+                android:id="@+id/user_action_share"
+                android:contentDescription="Share"
+                />
+
+            <ImageView
+                style="@style/user_action_style_iv"
+                android:src="@mipmap/ic_call_black_24dp"
+                android:id="@+id/user_action_call"
+                android:contentDescription="Call"
+                />
+
+            <ImageView
+                style="@style/user_action_style_iv"
+                android:src="@mipmap/ic_delete_forever_black_24dp"
+                android:id="@+id/user_action_delete"
+                android:contentDescription="Delete"
+                />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--<View
+            style="@style/grey_view_separator"
+            android:layout_below="@+id/user_details_actions_rl"
+            android:id="@+id/line_view"
+            />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_details_actions_rl"
+            android:id="@+id/user_call_note"
+            android:padding="@dimen/size_10dp"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@android:color/black"
+            android:text="Here is the note for this particular user"
+            />
+
+            <!--<View
+                style="@style/grey_view_separator"
+                android:layout_below="@+id/user_call_note"
+                android:id="@+id/line_view2"
+                />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reminder_rl"
+                android:visibility="gone"
+                android:layout_below="@+id/user_call_note"
+                >
+
+                <ImageView
+                    style="@style/user_action_style_iv"
+                    android:src="@mipmap/ic_notifications_black_24dp"
+                    android:id="@+id/notification_iv"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notification_tv"
+                    android:text="24:12 12/09/2016"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/notification_iv"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="horizontal">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        >-->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_arrow_back_black_24dp"
+        android:background="@drawable/menu_btn"
+        android:tint="@android:color/white"
+        android:padding="@dimen/size_5dp"
+        android:id="@+id/back_button"
+        android:layout_alignParentLeft="true"
+        />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/back_button"
+        android:hint="Enter text to search"
+        android:imeOptions="actionSearch"
+        android:textColorHint="@color/sixty_white"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_cancel_white_24dp"
+        android:tint="@android:color/white"
+        android:padding="@dimen/size_5dp"
+        android:layout_toLeftOf="@+id/edtSearch"
+        android:background="@drawable/menu_btn"
+        android:id="@+id/canel_button"
+        android:layout_alignParentRight="true"
+        />
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

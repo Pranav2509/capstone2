@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/search_toolbar">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/top_layout"
+        android:weightSum="1"
+        android:elevation="4dp"
+        android:clipToPadding="true"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/header_calllogs_cotacts_tv"
+            android:text="@string/call_logs"
+
+            android:id="@+id/call_logs_tv"
+            />
+
+            />
+        <TextView
+            style="@style/header_calllogs_cotacts_tv"
+            android:text="@string/contact_list"
+
+            android:id="@+id/contact_list_tv"
+            />
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/questions_view_pager">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/logs_view_pager"
+            android:background="@color/white"
+            />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+
+    </style>
+
+    <style name="user_action_style_iv">
+        <item name="android:layout_height">@dimen/size_25dp</item>
+        <item name="android:layout_width">@dimen/size_25dp</item>
+        <item name="android:layout_marginLeft">@dimen/size_5dp</item>
+        <item name="android:layout_marginRight">@dimen/size_5dp</item>
+
+    </style>
+
+    <style name="grey_view_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_0.5dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="add_note_action_iv">
+        <item name="android:layout_width">@dimen/size_50dp</item>
+        <item name="android:layout_height">@dimen/size_50dp</item>
+        <item name="android:paddingLeft">@dimen/size_10dp</item>
+        <item name="android:paddingRight">@dimen/size_10dp</item>
+        <item name="android:background">@drawable/menu_btn</item>
+    </style>
+
+    <style name="header_calllogs_cotacts_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+
+    <dimen name="size_25dp">25dp</dimen>
+</resources>

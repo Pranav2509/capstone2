@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/seventy_white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/base_ll"
+        android:background="@drawable/menu_btn"
+        >
+
+    <ImageView
+        android:layout_width="@dimen/size_50dp"
+        android:layout_height="@dimen/size_50dp"
+        android:id="@+id/contact_iv"
+        android:layout_margin="@dimen/size_10dp"
+        android:src="@mipmap/contact_dummy"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_name"
+        android:text="Pranav"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:textSize="@dimen/text_size_18sp"
+        android:fontFamily="sans-serif-bold"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/contact_iv"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_name"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/size_15dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/contact_iv"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_call_details"
+        android:text="233"
+        android:textColor="@color/blue_color"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_call_type"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:text=""
+        />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_below="@+id/base_ll"
+        style="@style/grey_view_separator"
+        />
+
+
+</RelativeLayout>

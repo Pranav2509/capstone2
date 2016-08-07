@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="add_note_action_iv">
+                <item name="android:layout_width">@dimen/size_50dp</item>
+                <item name="android:layout_height">@dimen/size_50dp</item>
+                <item name="android:paddingLeft">@dimen/size_10dp</item>
+                <item name="android:paddingRight">@dimen/size_10dp</item>
+                <item name="android:paddingStart">@dimen/size_10dp</item>
+                <item name="android:paddingEnd">@dimen/size_10dp</item>
+                <item name="android:background">@drawable/menu_btn</item>
+        </style>
+
+        <style name="user_action_style_iv">
+                <item name="android:layout_height">@dimen/size_25dp</item>
+                <item name="android:layout_width">@dimen/size_25dp</item>
+                <item name="android:layout_marginLeft">@dimen/size_5dp</item>
+                <item name="android:layout_marginRight">@dimen/size_5dp</item>
+                <item name="android:layout_marginStart">@dimen/size_5dp</item>
+                <item name="android:layout_marginEnd">@dimen/size_5dp</item>
+        </style>
+
+</resources>
