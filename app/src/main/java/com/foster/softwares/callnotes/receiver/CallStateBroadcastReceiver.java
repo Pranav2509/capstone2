@@ -70,7 +70,7 @@ public class CallStateBroadcastReceiver extends BroadcastReceiver {
                 NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(context)
                                 .setSmallIcon(R.mipmap.ic_call_black_24dp)
-                                .setContentText("Tap to add note for "+number)
+                                .setContentText(context.getString(R.string.tap_to_add)+number)
                                 .setAutoCancel(true)
                                 .setContentTitle(contact_name)
                                 .setDefaults(Notification.DEFAULT_SOUND);

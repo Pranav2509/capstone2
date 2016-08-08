@@ -109,11 +109,11 @@ public class CallNotesListAdapter extends RecyclerView.Adapter<CallNotesListHold
             public void onClick(View v) {
 
                 try {
-                    String shareBody = "Please add the note for " + v.getTag().toString()
+                    String shareBody = mContext.getString(R.string.please_add_note) + v.getTag().toString()
                             +" - " + v.getTag(R.string.contact_note).toString();
                     Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                     sharingIntent.setType("text/plain");
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Add call notes");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, mContext.getString(R.string.add_string_for));
                     sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
 
                     mActivity.startActivity(Intent.createChooser(sharingIntent, mContext.getResources().getString(R.string.share_using)));

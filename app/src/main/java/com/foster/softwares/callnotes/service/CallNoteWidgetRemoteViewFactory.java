@@ -28,7 +28,7 @@ public class CallNoteWidgetRemoteViewFactory implements RemoteViewsService.Remot
     Intent mIntent;
     ArrayList<CallNoteDomain> callNoteDomainArrayList = new ArrayList<CallNoteDomain>();
     CallNoteDomain callNoteDomain;
-    private String TAG = "CallNoteWidgetRemoteViewFactory";
+    private String TAG = "ViewFactory";
 
     public CallNoteWidgetRemoteViewFactory(Context context, Intent intent) {
 
