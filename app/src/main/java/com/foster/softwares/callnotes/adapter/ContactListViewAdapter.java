@@ -55,10 +55,15 @@ public class ContactListViewAdapter extends RecyclerView.Adapter<ContactDetailsV
                         search, null, CallLog.Calls.DATE + "  DESC limit 30;");
             }
         }else{
-            search = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME+ " LIKE '%"+keywords+
-                    "%' OR "+ ContactsContract.CommonDataKinds.Phone.NUMBER + " LIKE '%" + keywords + "%'";
-            mCursor = mContext.getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                    null, search, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC ");
+            if (ActivityCompat.checkSelfPermission(context,
+                    Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+
+            }else {
+                search = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " LIKE '%" + keywords +
+                        "%' OR " + ContactsContract.CommonDataKinds.Phone.NUMBER + " LIKE '%" + keywords + "%'";
+                mCursor = mContext.getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                        null, search, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC ");
+            }
         }
         Log.i(TAG, "ContactListViewAdapter constructor");
         mPosition = position;

@@ -68,14 +68,6 @@ public class CallNotesWidgetProvider extends AppWidgetProvider {
                     startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setPendingIntentTemplate(R.id.list, startActivityPendingIntent);
 
-
-            /*Intent toastIntent = new Intent(context, CallNotesWidgetProvider.class);
-            toastIntent.setAction(ACTION_WIDGET_ABOUT);
-
-            PendingIntent toastPendingIntent = PendingIntent.getBroadcast(context, 0, toastIntent,
-                    0);
-            rv.setOnClickPendingIntent(R.id.base_ll, toastPendingIntent);*/
-
             appWidgetManager.updateAppWidget(appWidgetIds[i], rv);
         }
     }

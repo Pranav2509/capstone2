@@ -95,7 +95,6 @@ public class CallStateBroadcastReceiver extends BroadcastReceiver {
             if (contactLookup != null && contactLookup.getCount() > 0) {
                 contactLookup.moveToNext();
                 name = contactLookup.getString(contactLookup.getColumnIndex(ContactsContract.Data.DISPLAY_NAME));
-                //String contactId = contactLookup.getString(contactLookup.getColumnIndex(BaseColumns._ID));
             }
         } finally {
             if (contactLookup != null) {

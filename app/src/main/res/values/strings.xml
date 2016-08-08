@@ -19,4 +19,6 @@
     <string name="note_not_saved">Note not saved</string>
     <string name="note_Saved">Note saved</string>
     <string name="note_updated">Note updated</string>
+    <string name="permission_not_granted">Permission not granted</string>
+    <string name="hint_text">Please enter name or number</string>
 </resources>

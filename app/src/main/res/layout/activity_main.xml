@@ -7,7 +7,7 @@
     tools:context=".UI.MainActivity">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/tl_id"
         layout="@layout/search_toolbar">
     </include>
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_rv"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/tl_id"
         />
 
 

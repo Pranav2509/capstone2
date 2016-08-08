@@ -89,13 +89,17 @@ public class CallNotesListAdapter extends RecyclerView.Adapter<CallNotesListHold
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + v.getTag().toString()));
-                if (ActivityCompat.checkSelfPermission(mActivity, Manifest.permission.CALL_PHONE)
-                        != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(mContext, "Permission not granted", Toast.LENGTH_LONG).show();
-                    return;
+                try {
+                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + v.getTag().toString()));
+                    if (ActivityCompat.checkSelfPermission(mActivity, Manifest.permission.CALL_PHONE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        Toast.makeText(mContext, mContext.getString(R.string.permission_not_granted), Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    mActivity.startActivity(intent);
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
-                mActivity.startActivity(intent);
 
             }
         });

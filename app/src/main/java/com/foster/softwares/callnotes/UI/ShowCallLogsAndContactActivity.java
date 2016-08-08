@@ -85,6 +85,7 @@ public class ShowCallLogsAndContactActivity extends AppCompatActivity {
         list.add("b");
 
         viewPager = (ViewPager) findViewById(R.id.logs_view_pager);
+
         CallLogsBaseAdapter callLogsBaseAdapter = new CallLogsBaseAdapter(this, list, "");
         viewPager.setAdapter(callLogsBaseAdapter);
 
